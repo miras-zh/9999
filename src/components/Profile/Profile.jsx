@@ -1,8 +1,10 @@
 import React from "react";
+import s from "./Prf.module.css";
+import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
   return (
-    <div className="content">
+    <div className={s.content}>
       <div>
         <img
           src="https://lh3.googleusercontent.com/SIQH47SpD0_1ava4sAYRz-_mCNFToC2Xv-Zr2lODCjbvm2ZKwps6mzbObgp_jUNTEg"
@@ -15,14 +17,7 @@ const Profile = () => {
           alt=""
         />
       </div>
-      <div>
-        My Post
-        <div>New pOst</div>
-        <div>
-          <div>post1</div>
-          <div>post2</div>
-        </div>
-      </div>
+      <MyPosts/>
     </div>
   );
 };

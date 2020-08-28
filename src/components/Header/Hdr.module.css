@@ -1,0 +1,16 @@
+.header {
+    grid-area: h;
+    background-color: cadetblue;
+    height: 150px;
+    margin-bottom: 10px;
+    border-bottom: 5px solid white;
+  }
+  
+  .header img {
+    width: 80px;
+    height: 80px;
+    margin-left: 70px;
+    margin-top: 10px;
+    border-bottom: 5px solid white;
+  }
+  

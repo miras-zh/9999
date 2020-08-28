@@ -4,31 +4,9 @@
   grid-template-areas:
     "h h"
     "n c";
-  grid-template-rows: 100px 1fr;
-  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 90px 1fr  ;
+  grid-template-columns: 2fr 10fr ;
   /*grid-gap: 10px;*/
   width: 1200px;
   margin: 0 auto;
-}
-.header {
-  grid-area: h;
-  background-color: cadetblue;
-  height: 150px;
-  margin-bottom: 10px;
-}
-
-.header img {
-  width: 80px;
-  height: 80px;
-  margin-left: 70px;
-}
-
-.nav {
-  grid-area: n;
-  background-color: olivedrab;
-}
-
-.content {
-  grid-area: c;
-  background-color: lightgreen;
 }
