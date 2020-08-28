@@ -1,9 +1,4 @@
-
 .content {
-    grid-area: c;
-    background-color: lightgreen;
-  }
-  
-  .posts{
-
-  }
+  grid-area: c;
+  background-color: gainsboro;
+}

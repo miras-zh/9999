@@ -1,0 +1,28 @@
+.item {
+  font-weight: bold;
+  font-size: 22px;
+  color: darkgreen;
+}
+.item img {
+  width: 80px;
+  border-radius: 33px;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+}
+
+.like img {
+  width: 25px;
+  align-items: center;
+  padding-top: 0;
+  padding-left: 80px;
+  padding-right: 5px;
+}
+
+.like span {
+  font-size: 15px;
+  align-items: center;
+  color: cadetblue;
+}
