@@ -2,23 +2,40 @@
   font-weight: bold;
   font-size: 22px;
   color: darkgreen;
+  align-items: center;
+  margin-top: 15px;
 }
 .item img {
-  width: 80px;
-  border-radius: 33px;
+  width: 60px;
+  border-radius: 80px;
+  padding-left: 10px;
+}
+
+.post_ava_message {
+  display: flex;
+  align-items: center;
+}
+
+.message {
+  padding-left: 30px;
 }
 
 .like {
   display: flex;
   align-items: center;
+  margin-top: 0;
 }
 
 .like img {
-  width: 25px;
+  width: 20px;
   align-items: center;
   padding-top: 0;
-  padding-left: 80px;
+  padding-left: 0px;
   padding-right: 5px;
+}
+.like_count {
+  padding-left: 80px;
+  color: darkblue;
 }
 
 .like span {
