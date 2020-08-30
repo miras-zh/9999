@@ -10,3 +10,11 @@
   width: 1200px;
   margin: 0 auto;
 }
+
+.app-wrapper-content{
+  grid-area:c;
+  background-color: gray;
+  margin-top: 2px;
+  margin-left: 2px;
+  padding-left: 5px;
+}
