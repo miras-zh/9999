@@ -1,14 +1,19 @@
 import React from "react";
-import s from './Nvb.module.css';
+import s from "./Nvb.module.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className={s.nav}>
       <div className={s.item}>
-        <a href="../Profile">Profile</a>
+        <NavLink to="./../Profile/Profile.jsx" activeClassName={s.active}>
+          Profile
+        </NavLink>
       </div>
       <div className={s.item}>
-        <a href="./../Dialogs">Messages</a>
+        <NavLink to="./../Dialogs/Dialogs.jsx" activeClassName={s.active}>
+          Messages
+        </NavLink>
       </div>
       <div className={s.item}>
         <a>Main Content</a>

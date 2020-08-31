@@ -1,9 +1,18 @@
 .nav {
-    grid-area: n;
-    background-color: cadetblue;
-    margin-top: 2px;
-  }
-  
-  .item {
-    color: white;   
-  }
+  grid-area: n;
+  background-color: cadetblue;
+  margin-top: 2px;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.item a {
+  color: white;
+  text-decoration: none;
+  line-height: 35px;
+  font-size: 20 px;
+}
+
+.item a.active {
+  color: gold;
+}
