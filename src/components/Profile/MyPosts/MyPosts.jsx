@@ -7,6 +7,14 @@ const MyPosts = (props) => {
     { id: 1, messages: "Hi, my Frend!", likeS: 10 },
     { id: 2, messages: "it is my First post", likeS: 55 },
     { id: 3, messages: "end Posts", likeS: 65 },
+    { id: 3, messages: "end Posts", likeS: 65 },
+    { id: 3, messages: "end Posts", likeS: 65 },
+    { id: 3, messages: "end Posts", likeS: 65 },
+    { id: 3, messages: "end Posts", likeS: 65 },
+    { id: 3, messages: "end Posts", likeS: 65 },
+    { id: 3, messages: "end Posts", likeS: 65 },
+    { id: 3, messages: "end Posts", likeS: 65 },
+    { id: 3, messages: "end Posts", likeS: 65 },
   ];
 
   let postsEl = postData.map((p) => {
