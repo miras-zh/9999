@@ -2,3 +2,14 @@
   grid-area: c;
   background-color: cornflowerblue;
 }
+
+.btn button {
+  margin-left: 67px;
+  margin-top: 5px;
+  width: 160px;
+  height: 15pz;
+  border: 1px solid white;
+  border-radius: 14px;
+  background-color: teal;
+  color: white;
+}

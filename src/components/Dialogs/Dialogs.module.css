@@ -9,9 +9,6 @@
   line-height: 30px;
 }
 
-.dialog {
-}
-
 .messages {
   border-left: 2px solid white;
   padding-left: 80px;
@@ -26,4 +23,15 @@
   line-height: 35px;
   margin-bottom: 10px;
   color: honeydew;
+}
+
+.dialog a {
+  color: yellowgreen;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 18 px;
+}
+
+.dialogs a.active {
+  color: gold;
 }
