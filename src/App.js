@@ -22,14 +22,14 @@ function App(props) {
             path="/dialogs"
             render={() => (
               <Dialogs
-                dialogData={props.state.dialogsData}
-                messagesData={props.state.messagesData}
+                dialogData={props.state.messagePage.dialogsData}
+                messageData={props.state.messagePage.messagesData}
               />
             )}
           />
           <Route
             path="/profile"
-            render={() => <Profile postData={props.state.postsData} />}
+            render={() => <Profile postData={props.state.profilePage.postsData} />}
           />
         </div>
       </div>

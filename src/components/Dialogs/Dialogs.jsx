@@ -12,7 +12,7 @@ const Dialogs = (props) => {
     return <DialogItem name={d.name} id={d.id} />;
   });
 
-  let messagesEl = props.messagesData.map((m) => {
+  let messagesEl = props.messageData.map((m) => {
     return <Message message={m.messages} />;
   });
 
