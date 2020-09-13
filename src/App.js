@@ -29,7 +29,12 @@ function App(props) {
           />
           <Route
             path="/profile"
-            render={() => <Profile postData={props.state.profilePage.postsData} />}
+            render={() => (
+              <Profile
+                postData={props.state.profilePage.postsData}
+                addPost={props.addPost}
+              />
+            )}
           />
         </div>
       </div>
