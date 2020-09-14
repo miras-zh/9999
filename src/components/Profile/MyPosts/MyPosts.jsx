@@ -13,7 +13,14 @@ const MyPosts = (props) => {
     debugger;
     let textt = newPostElement.current.value; //ссылается на нативный элемент
     props.addPost(textt);
-    newPostElement.current.value = "";
+    props.updNewPostText('');
+  };
+
+  let onPostChange = () => {
+    let text = newPostElement.current.value;
+    props.updNewPostText(text);
+    console.log(text);
+    newPostElement.current.value = " ";
   };
 
   return (
@@ -21,7 +28,11 @@ const MyPosts = (props) => {
       <h2>My Post</h2>
       <div>
         New Post
-        <textarea ref={newPostElement}></textarea>
+        <textarea
+          onChange={onPostChange}
+          ref={newPostElement}
+          value={props.newPostText}
+        />
         <div className={s.btn}>
           <button onClick={addPost}>Add Post</button>
         </div>

@@ -33,6 +33,8 @@ function App(props) {
               <Profile
                 postData={props.state.profilePage.postsData}
                 addPost={props.addPost}
+                newPostText={props.state.profilePage.newPostText}
+                updNewPostText={props.updNewPostText}
               />
             )}
           />
