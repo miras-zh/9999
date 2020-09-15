@@ -10,10 +10,9 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    debugger;
     let textt = newPostElement.current.value; //ссылается на нативный элемент
     props.addPost(textt);
-    props.updNewPostText('');
+    props.updNewPostText("");
   };
 
   let onPostChange = () => {

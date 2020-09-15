@@ -4,7 +4,7 @@ let state = {
   profilePage: {
     postsData: [
       { id: 1, messages: "Hi, my Frend!", likeS: 10 },
-      { id: 2, messages: "it is my First post", likeS: 55 }
+      { id: 2, messages: "it is my First post", likeS: 55 },
     ],
     newPostText: "",
   },
@@ -26,14 +26,16 @@ let state = {
   sidebar: {},
 };
 
-export let addPost = (postMessage) => {
-  let newPost = { id: 5, messages: postMessage, likeS: 0 };
+window.state = state;
+
+export let addPost = () => {
+  let newPost = { id: 5, messages: state.profilePage.newPostText, likeS: 0 };
   state.profilePage.postsData.push(newPost);
+  state.profilePage.newPostText = "";
   rerenderEntireTree(state);
 };
 
 export let updNewPostText = (newText) => {
-  let newPost = { id: 5, messages: postMessage, likeS: 0 };
   state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
 };
