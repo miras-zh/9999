@@ -35,3 +35,27 @@
 .dialogs a.active {
   color: gold;
 }
+
+.sendMessage {
+  display: flex;
+  text-align: center;
+  
+}
+
+.sendMessage textarea {
+  width: 400px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.sendMessage button {
+  margin-bottom: 35px;
+  margin-top: 20px ;  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color:white;
+  background-color:darkcyan;
+  font-weight: 600;
+  border-radius:10px;
+}

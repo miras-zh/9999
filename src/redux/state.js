@@ -1,3 +1,9 @@
+const ADD_POST ='ADD-POST';
+const UPDATE_NEW_POST_TEXT='UPDATE-NEW-POST-TEXT';
+const ADD_MESSAGE='ADD-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
+
+
 let store = {
   _state: {
     profilePage: {
@@ -21,6 +27,7 @@ let store = {
         { id: 5, name: "London" },
         { id: 6, name: "Berlin" },
       ],
+      newMessageText:""
     },
     sidebar: {},
   },
@@ -48,8 +55,50 @@ let store = {
         this._state.profilePage.newPostText = action.newText;
         this._callSubscriber(this._state);
       }
+  },
+  dispatchMessage(action){
+    if(action.type === ADD_MESSAGE){
+      debugger;
+      let newMessage = {
+        id:5,
+        messages:this._state.messagePage.newMessageText
+      }
+      debugger;
+      this._state.messagePage.messageData.push(newMessage);
+      this._callSubscriber(this._state);
+      this._state.messagePage.newMessageText = "";
+    }else if(action.type === UPDATE_NEW_MESSAGE_TEXT){
+      this._state.messagePage.newMessageText = action.newTextM;
+      this._callSubscriber(this._state);
+    }
   }
 };
+
+export const actionCreatorAddPost = () => {
+  return {
+    type:ADD_POST
+  }
+}
+
+export const actionCreatorUpdNewPostText = (text) => {
+  return {
+    type:UPDATE_NEW_POST_TEXT, 
+    newText: text
+  }
+}
+
+export const actionMCreatorAddMessage = ()=>{
+  return {
+    type: ADD_MESSAGE
+  }
+}
+
+export const actionMUpdNewMessageText = (textM)=>{
+  return {
+    type: UPDATE_NEW_MESSAGE_TEXT,
+    newTextM:textM
+  }
+}
 
 export default store;
 window.store = store;

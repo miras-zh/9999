@@ -1,19 +1,7 @@
 import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
-
-let actionCreatorAddPost = () => {
-  return {
-    type:"ADD-POST"
-  }
-}
-
-let actionCreatorUpdNewPostText = (text) => {
-  return {
-    type:'UPDATE-NEW-POST-TEXT', 
-    newText: text
-  }
-}
+import {actionCreatorAddPost, actionCreatorUpdNewPostText} from './../../../redux/state';
 
 const MyPosts = (props) => {
   let postsEl = props.postData.map((p) => {
