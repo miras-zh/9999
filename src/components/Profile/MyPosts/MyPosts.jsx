@@ -2,6 +2,19 @@ import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
+let actionCreatorAddPost = () => {
+  return {
+    type:"ADD-POST"
+  }
+}
+
+let actionCreatorUpdNewPostText = (text) => {
+  return {
+    type:'UPDATE-NEW-POST-TEXT', 
+    newText: text
+  }
+}
+
 const MyPosts = (props) => {
   let postsEl = props.postData.map((p) => {
     return <Post message={p.messages} likeCount={p.likeS} />;
@@ -10,16 +23,20 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    let textt = newPostElement.current.value; //ссылается на нативный элемент
-    props.addPost(textt);
-    props.updNewPostText("");
+    if (newPostElement.current.value !== ''){
+      let textt = newPostElement.current.value; //ссылается на нативный элемент
+      props.dispatch(actionCreatorAddPost());
+      newPostElement.current.value = '';
+    }else{
+      alert('Type text PLEASE')
+    }
   };
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.updNewPostText(text);
+    props.dispatch(actionCreatorUpdNewPostText(text));
     console.log(text);
-    newPostElement.current.value = " ";
+    //newPostElement.current.value = " ";
   };
 
   return (
