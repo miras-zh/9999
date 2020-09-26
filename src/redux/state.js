@@ -1,11 +1,6 @@
 import profileReducer from "./profile-reducer";
 import messageReducer from "./message-reducer";
 
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
-const ADD_MESSAGE = "ADD-MESSAGE";
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
-
 let store = {
   _state: {
     profilePage: {
@@ -52,31 +47,6 @@ let store = {
   },
 };
 
-export const actionCreatorAddPost = () => {
-  return {
-    type: ADD_POST,
-  };
-};
-
-export const actionCreatorUpdNewPostText = (text) => {
-  return {
-    type: UPDATE_NEW_POST_TEXT,
-    newText: text,
-  };
-};
-
-export const actionMCreatorAddMessage = () => {
-  return {
-    type: ADD_MESSAGE,
-  };
-};
-
-export const actionMUpdNewMessageText = (textM) => {
-  return {
-    type: UPDATE_NEW_MESSAGE_TEXT,
-    newTextM: textM,
-  };
-};
 
 export default store;
 window.store = store;
