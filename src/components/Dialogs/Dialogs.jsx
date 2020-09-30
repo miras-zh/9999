@@ -21,7 +21,7 @@ const Dialogs = (props) => {
 
   let addMessage = () => {
     if (newMessageElement.current.value !== "") {
-      props.dispatchMessage(actionMCreatorAddMessage());
+      props.dispatch(actionMCreatorAddMessage());
       newMessageElement.current.value = "";
     } else {
       alert("Type text PLEASE");
@@ -30,7 +30,7 @@ const Dialogs = (props) => {
 
   let onMessageChange = () => {
     let text = newMessageElement.current.value;
-    props.dispatchMessage(actionMUpdNewMessageText(text));
+    props.dispatch(actionMUpdNewMessageText(text));
   };
 
   return (

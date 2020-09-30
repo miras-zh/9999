@@ -15,10 +15,12 @@ const App = (props) => {
       <div className="app-wrapper-content">
         <Route
           path="/dialogs"
-          render={() => <Dialogs 
-                          messagePage={props.state.messagePage} 
-                          dispatchMessage={props.dispatchMessage}
-                          />}
+          render={() => (
+            <Dialogs
+              messagePage={props.state.messagePage}
+              dispatch={props.dispatch}
+            />
+          )}
         />
         <Route
           path="/profile"

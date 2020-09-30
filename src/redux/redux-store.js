@@ -1,12 +1,14 @@
 const { createStore } = require("redux");
-import {combineReducers, createStore} from "redux";
+import { combineReducers, createStore } from "redux";
 import profileReducer from "./profile-reducer";
 import messageReducer from "./message-reducer";
+import sidebarReducer from "./sidebar-reducer";
 
 let reducers = combineReducers({
-    profileReducer:profileReducer,
-    messageReducer:messageReducer
-})
+  profileReducer: profileReducer,
+  messageReducer: messageReducer,
+  sidebarReducer: sidebarReducer,
+});
 
 let store = createStore(reducers);
 
