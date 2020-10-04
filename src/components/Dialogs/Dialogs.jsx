@@ -1,12 +1,7 @@
 import React from "react";
 import s from "./Dialogs.module.css";
-import { NavLink } from "react-router-dom";
 import DialogItem from "./Dialog-item/DialogItem";
 import Message from "./Message/Message";
-import {
-  actionMCreatorAddMessage,
-  actionMUpdNewMessageText,
-} from "./../../redux/message-reducer";
 
 const Dialogs = (props) => {
   let dialogsEl = props.messagePage.dialogData.map((d) => {
@@ -19,9 +14,9 @@ const Dialogs = (props) => {
 
   let newMessageElement = React.createRef();
 
-  let addMessage = () => {
+  let onAddMessage = () => {
     if (newMessageElement.current.value !== "") {
-      props.dispatch(actionMCreatorAddMessage());
+      props.addMessage();
       newMessageElement.current.value = "";
     } else {
       alert("Type text PLEASE");
@@ -30,7 +25,7 @@ const Dialogs = (props) => {
 
   let onMessageChange = () => {
     let text = newMessageElement.current.value;
-    props.dispatch(actionMUpdNewMessageText(text));
+    props.updNewMessageText(text);
   };
 
   return (
@@ -44,7 +39,7 @@ const Dialogs = (props) => {
             ref={newMessageElement}
             value={props.newMessageText}
           />
-          <button onClick={addMessage}>Send Message</button>
+          <button onClick={onAddMessage}>Send Message</button>
         </div>
         {messagesEl}
       </div>

@@ -13,14 +13,8 @@ const MyPosts = (props) => {
 
   let newPostElement = React.createRef();
 
-  let addPost = () => {
-    if (newPostElement.current.value !== "") {
-      let textt = newPostElement.current.value; //ссылается на нативный элемент
-      props.dispatch(actionCreatorAddPost());
-      newPostElement.current.value = "";
-    } else {
-      alert("Type text PLEASE");
-    }
+  let onAddPost = () => {
+    props.addPost();
   };
 
   let onPostChange = () => {
@@ -39,7 +33,7 @@ const MyPosts = (props) => {
           value={props.newPostText}
         />
         <div className={s.btn}>
-          <button onClick={addPost}>Add Post</button>
+          <button onClick={onAddPost}>Add Post</button>
         </div>
       </div>
       <div className={s.posts}>{postsEl}</div>
