@@ -1,7 +1,10 @@
 import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import {actionCreatorAddPost, actionCreatorUpdNewPostText} from './../../../redux/profile-reducer';
+import {
+  actionCreatorAddPost,
+  actionCreatorUpdNewPostText,
+} from "./../../../redux/profile-reducer";
 
 const MyPosts = (props) => {
   let postsEl = props.postData.map((p) => {
@@ -11,20 +14,18 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    if (newPostElement.current.value !== ''){
+    if (newPostElement.current.value !== "") {
       let textt = newPostElement.current.value; //ссылается на нативный элемент
       props.dispatch(actionCreatorAddPost());
-      newPostElement.current.value = '';
-    }else{
-      alert('Type text PLEASE')
+      newPostElement.current.value = "";
+    } else {
+      alert("Type text PLEASE");
     }
   };
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.dispatch(actionCreatorUpdNewPostText(text));
-    console.log(text);
-    //newPostElement.current.value = " ";
+    props.updateNewPostText(text);
   };
 
   return (
