@@ -5,8 +5,9 @@ import {
   actionMCreatorAddMessage,
   actionMUpdNewMessageText,
 } from "../../redux/message-reducer";
+import StoreContext from './StoreContext';
 
-const DialogsContainer = (props) => {
+const DialogsContainer = () => {
   let onAddMessage = () => {
     props.store.dispatch(actionMCreatorAddMessage());
   };
