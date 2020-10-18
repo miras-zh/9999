@@ -1,30 +1,32 @@
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
+const SET_USERS="SET_USERS"
 
 let initialState = {
-  usersData: [
-    { id: 1, followed:false,fullName: "Miko", status: 'I am DEVELOPER', location:{city:'Astana',country:'KZ'} },
-    { id: 2, followed:false,fullName: "Anel", status: 'Home', location:{city:'KOstanay',country:'KZ'} },
-    { id: 3, followed:false,fullName: "Nargiz", status: 'Sadik', location:{city:'Almaty',country:'KZ'} },
-    { id: 4, followed:false,fullName: "Rasul", status: 'Milk', location:{city:'Moskow',country:'RU'} },
-    { id: 5, followed:false,fullName: "User JS", status: 'I am DEVELOPER', location:{city:'Astana',country:'KZ'} },
+  users: [
+    { id: 1, photoUrl:'./../components/users/img/ava.jpg',followed:false,fullName: "Miko", status: 'I am DEVELOPER', location:{city:'Astana',country:'KZ'} },
+    { id: 2, photoUrl:'./../components/users/img/ava.jpg',followed:false,fullName: "Anel", status: 'Home', location:{city:'KOstanay',country:'KZ'} },
+    { id: 3, photoUrl:'./../components/users/img/ava.jpg',followed:false,fullName: "Nargiz", status: 'Sadik', location:{city:'Almaty',country:'KZ'} },
+    { id: 4, photoUrl:'./../components/users/img/ava.jpg',followed:false,fullName: "Rasul", status: 'Milk', location:{city:'Moskow',country:'RU'} },
+    { id: 5, photoUrl:'./../components/users/img/ava.jpg',followed:false,fullName: "User JS", status: 'I am DEVELOPER', location:{city:'Astana',country:'KZ'} },
   ],
   newPostText: "",
 };
 
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FOLLOW:
+    case FOLLOW:{
      return {
         ...state,
         users: state.users.map((u) => {
-          if(u.id === action.id){
+          if(u.id === action.userId){
             return {...u,folowed:true}
           }
           return u;
         })
       }
-    case UNFOLLOW:
+      }
+    case UNFOLLOW:{
       return {
         ...state,
         users: state.users.map((u) => {
@@ -34,7 +36,7 @@ const usersReducer = (state = initialState, action) => {
           return u;
         })
       }
-    
+    }
     case SET_USERS: {
       return {...state, users:[...state.users, ...action.users]}
     }
@@ -46,19 +48,19 @@ const usersReducer = (state = initialState, action) => {
 export const actionCreatorFollow = (userId) => {
   return {
     type: FOLLOW,
-    userId:userId
+    userId
   };
 };
 
 export const actionCreatorUnfollow = (userId) => {
   return {
-    type: UNFOLLOW,userId:userId
+    type: UNFOLLOW,userId
   };
 };
 
 export const actionCreatorSetUser = (userId) => {
   return {
-    type:SET_USERS, userId:userId
+    type:SET_USERS, userId
   }
 }
 
