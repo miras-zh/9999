@@ -30,6 +30,11 @@ const Navbar = () => {
         Settings
         </NavLink>
       </div>
+      <div className={s.item}>
+        <NavLink to="./../users/usersContainer.jsx" activeClassName={s.active}>
+          Users
+        </NavLink>
+      </div>
     </nav>
   );
 };
